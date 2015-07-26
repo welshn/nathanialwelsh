@@ -16,13 +16,13 @@
 				<h2>Quick Links</h2>
 				<ul>
 					<li><a href="">Resume</a></li>
-					<li><a href="">Resume</a></li>
-					<li><a href="">Resume</a></li>
+					<li><a href="">How I Made this Site?</a></li>
+					<li><a href="">Going to Space!</a></li>
 					<li><a href="">GitHub Team Project</a></li>
 				</ul>
 			</div>
 			<div class="content-midLeft">
-				<a class="twitter-timeline" href="https://twitter.com/NathanialWelsh" data-widget-id="624755494679281665" height="250">Tweets by @NathanialWelsh</a>
+				<a class="twitter-timeline" href="https://twitter.com/NathanialWelsh" data-widget-id="624755494679281665" height="250" width="100%">Tweets by @NathanialWelsh</a>
 			</div>
 			<div class="content-midRight">
 				<h2>Quote of the Day</h2>

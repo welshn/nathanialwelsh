@@ -78,7 +78,7 @@ The value is an array of structures with the following keys:
 */
 component{
 	// Layout Variables
-	this.name 			= "The Real Deal";
+	this.name 			= "Nathanial Welsh Design";
 	this.description 	= "The Layout";
 	this.version		= "1.2";
 	this.author 		= "Computer Know How";
