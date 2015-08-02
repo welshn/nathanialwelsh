@@ -6,16 +6,16 @@
 	<ul class="sidebar-nav">	
 		<cfset menuData = cb.rootMenu(type="data",levels="*")>
 		<cfloop array="#menuData#" index="menuItem">
-			<cfif structKeyExists(menuItem, "subPageMenu")>
+<!--- 			<cfif structKeyExists(menuItem, "subPageMenu")>
 				<li class="">
 					<a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title#</b></a>
 					#buildSubMenu(menuItem.subPageMenu)#
 				</li>
-			<cfelse>
+			<cfelse> --->
 				<cfif !cb.isBlogView() and event.buildLink(cb.getCurrentPage().getSlug()) eq menuItem.link><li class="active"><cfelse><li></cfif>
 					<a href="#menuItem.link#">#menuItem.title#</a>
 				</li>
-			</cfif>
+			<!--- </cfif> --->
 		</cfloop>
 
 		<cfif ( !prc.cbSettings.cb_site_disable_blog )>
@@ -39,7 +39,7 @@
 </div>
 </cfoutput>
 
-<cfscript>
+<!--- <cfscript>
 	public any function buildSubMenu(menuData) {
 		var menu = '<ul class="dropdown-menu">';
 		for(var menuItem in arguments.menuData){
@@ -55,4 +55,4 @@
 
 		return menu;
 	}
-</cfscript>
+</cfscript> --->

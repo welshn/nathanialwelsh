@@ -451,6 +451,10 @@ header h1{
 	display: inline;
 }
 
+.sidenav{
+	float:right;
+}
+
 .header-left{
 	float:left;
 }

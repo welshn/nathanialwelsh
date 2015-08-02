@@ -119,15 +119,7 @@
 					</div>
 				</cfif> --->
 				<div class="row-fluid">
-					<cfif prc.page.getNumberOfChildren()>
-						<div class="col-md-3 sidenav">
-							#cb.quickView(view='_pagesidebar')#
-						</div>
-						<cfset variables.span = 9>
-					<cfelse>
-						<cfset variables.span = 12>
-					</cfif>
-					<div class="col-md#variables.span#">
+					<div class="col-md-12">
 						<!--- ContentBoxEvent --->
 						#cb.event("cbui_beforeContent")#
 
@@ -136,7 +128,7 @@
 
 						<!--- ContentBoxEvent --->
 						#cb.event("cbui_afterContent")#
-					</div>
+					</div>		
 				</div>		
 			</div>
 			#cb.quickView(view='_footer')#
