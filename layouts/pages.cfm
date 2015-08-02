@@ -141,6 +141,7 @@
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/jquery.js"></script>
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/d3.min.js"></script>
 	
 	<script>
 	    $("##menu-toggle").click(function(e) {
