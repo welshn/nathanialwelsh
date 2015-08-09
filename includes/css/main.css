@@ -9,11 +9,17 @@ h2 {
 	margin-top: 1px;
 }
 
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .post-comments {
 	font-size: 1.2em;
 }
 html, body {
 	height: 100%;
+	background-color: #f2f2f2;
 }
 #content {
 	min-height: 100%;
@@ -170,7 +176,7 @@ body{
 }
 .toggled .hotdog-wrapper{
 	margin-left: 0px;
-	width: 75px; 
+	width: 75px;
 	z-index: 99999;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
@@ -179,9 +185,9 @@ body{
 }
 
 .hotdog-wrapper{
-	margin-left: -250px; 
+	margin-left: -250px;
 	position:fixed;
-	z-index: 9999; 
+	z-index: 9999;
 	width: 250px;
 	border-bottom: 1px solid rgb(39, 39, 39);
 	background: #1f2223;
@@ -191,18 +197,19 @@ body{
 	transition: all 0.5s ease;
 	height: 75px;
 }
-.row-fluid {
-	padding:15px;
-}
 
 #page-content-wrapper {
 	width: 100%;
-	position: absolute;
+	padding: 0 10px 10px 10px;
 }
 
 #wrapper.toggled #page-content-wrapper {
 	position: absolute;
 	margin-right: -250px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 /* Sidebar Styles */
@@ -292,6 +299,11 @@ body{
 	#wrapper.toggled #page-content-wrapper {
 		position: relative;
 		margin-right: 0;
+		margin-left: 80px;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
 	}
 }
 
@@ -319,7 +331,6 @@ header h1{
 
 .socialIcons a{
 	padding: 10px;
-	color:rgb(153, 153, 153);
 	text-decoration: none;
 }
 
@@ -328,32 +339,71 @@ header h1{
 	border: 1px solid rgb(232, 232, 232);
 }
 
-.fa-twitter:hover{
+.socialIcons .fa{
+	width: 50px;
+}
+
+.fa-twitter{
 	color:#57cdf1;
 }
 
-.fa-facebook:hover{
+.fa-twitter:hover{
+	color: white;
+	background-color: #57cdf1;
+}
+
+.fa-facebook{
 	color:#44619d;
 }
 
-.fa-google-plus:hover{
+.fa-facebook:hover{
+	color: white;
+	background-color: #44619d;
+}
+
+.fa-google-plus{
 	color:#d73d32;
 }
 
-.fa-linkedin:hover{
+.fa-google:hover{
+	color: white;
+	background-color: #d73d32;
+}
+
+.fa-linkedin{
 	color: #0274b3;
 }
 
-.fa-github:hover{
+.fa-linkedin:hover{
+	color: white;
+	background-color: #0274b3;
+}
+
+.fa-github{
 	color: black;
 }
 
-.fa-trello:hover{
+.fa-github:hover{
+	color: white;
+	background-color: black;
+}
+
+.fa-trello{
 	color: #1a5973;
 }
 
-.fa-bitbucket:hover {
+.fa-trello:hover{
+	color: white;
+	background-color: #1a5973;
+}
+
+.fa-bitbucket {
 	color: #1f5081;
+}
+
+.fa-bitbucket:hover{
+	color: white;
+	background-color: #1f5081;
 }
 
 .copyRight{
@@ -430,6 +480,7 @@ header h1{
 
 .footer ul{
 	margin-bottom: 0;
+	padding-left: 0px;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -482,8 +533,8 @@ header h1{
 	width: 0;
 	z-index: 1;
 	background-color: rgb(42, 42, 42);
-	-webkit-transition: all .3s; 
-	transition: all .3s; 
+	-webkit-transition: all .3s;
+	transition: all .3s;
 	opacity: .5;
 }
 
@@ -580,6 +631,10 @@ header h1{
     transition: box-shadow .3s ease-out;
 }
 
+.mobile-title {
+	display: none;
+}
+
 @media (max-width: 1400px) {
 	.content-left, .content-midLeft{
 		width:50%;
@@ -593,4 +648,57 @@ header h1{
 	.content-left, .content-midLeft {
 		border-bottom: 1px solid rgb(232, 232, 232);
 	}
+}
+
+@media (max-width: 1024px) {
+	.site-banner {
+	    right: 50px;
+	}
+}
+
+@media (max-width: 375px) {
+	.infoHeader ul li {
+	    display: none;
+	}
+
+	.mobile-title {
+		display: block;
+	}
+
+	.carousel {
+		display: none;
+	}
+
+	.content-left, .content-midLeft{
+		width:100%;
+	}
+
+	.infoHeader h1 {
+		text-align: center;
+		font-weight: bold;
+		margin-top: 0px;
+		padding-top: 15px;
+		color: white;
+	}
+
+	.infoHeader {
+		background-color: #1f2223;
+	}
+}
+
+.content-wrap {
+	background-color: white;
+	padding: 0 12px 12px 12px;
+	margin: 7.5px;
+	border-width: 0 0 1px;
+	border: 1px solid rgb(232, 232, 232);
+	border-radius: 5px;
+	box-shadow: 0 0 0 -3px rgba(0, 0, 0, 0);
+	transition: box-shadow .3s ease-out;
+}
+
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 0px;
+    padding-left: 0px;
 }

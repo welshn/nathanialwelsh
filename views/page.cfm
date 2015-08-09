@@ -9,16 +9,19 @@
 	<!--- post --->
 	<div class="post" id="post_#prc.page.getContentID()#">
 		<!--- Title --->
+
 		<div class="post-title">
-			<div class="shortcodes">
-			<!--- Title --->
-			<div class="underlined-title">
-				<h2>#prc.page.getTitle()#</h2>
-				<div class="text-divider5">
-					<span></span>
+			<cfif cb.getCurrentPage().getSlug() NEQ cb.getHomePage()>
+				<div class="shortcodes">
+				<!--- Title --->
+					<div class="underlined-title">
+						<h2>#prc.page.getTitle()#</h2>
+						<div class="text-divider5">
+							<span></span>
+						</div>
+					</div>
 				</div>
-			</div>
-			</div>
+			</cfif>
 
 			<!--- Render Content --->
 			#prc.page.renderContent()#

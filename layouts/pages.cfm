@@ -55,14 +55,15 @@
 		#cb.event("cbui_beforeHeadEnd")#
 	</head>
 	<body>
-		<div id="wrapper">	
+		<div id="wrapper">
 			#cb.quickView(view='_header')#
 			<div class="infoHeader">
-			  <ul>
-			    <li><i class="fa fa-search fa-2x"></i></li>
-			    <li class="search-list">#cb.quickView("_search")#
-			    <li class="site-banner">Nathanial Welsh</li>
-			  </ul>
+				<h1 class="mobile-title">Nathanial Welsh</h1>
+				<ul>
+					<li><i class="fa fa-search fa-2x"></i></li>
+					<li class="search-list">#cb.quickView("_search")#
+					<li class="site-banner">Nathanial Welsh</li>
+				</ul>
 			</div>
 			<!-- Full Page Image Background Carousel Header -->
 			<cfif cb.getCurrentPage().getSlug() EQ cb.getHomePage()>
@@ -87,7 +88,6 @@
 							</div> --->
 						</div>
 					</div>
-
 
 					<a class="left carousel-control" href="##myCarousel" data-slide="prev">
 						<span class="icon-prev"></span>
@@ -119,17 +119,15 @@
 					</div>
 				</cfif> --->
 				<div class="row-fluid">
-					<div class="col-md-12">
-						<!--- ContentBoxEvent --->
-						#cb.event("cbui_beforeContent")#
+					<!--- ContentBoxEvent --->
+					#cb.event("cbui_beforeContent")#
 
-						<!--- Content --->
-						#renderView()#
+					<!--- Content --->
+					#renderView()#
 
-						<!--- ContentBoxEvent --->
-						#cb.event("cbui_afterContent")#
-					</div>		
-				</div>		
+					<!--- ContentBoxEvent --->
+					#cb.event("cbui_afterContent")#
+				</div>
 			</div>
 			#cb.quickView(view='_footer')#
 		</div>
@@ -142,7 +140,7 @@
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/d3.min.js"></script>
-	
+
 	<script>
 	    $("##menu-toggle").click(function(e) {
 	        e.preventDefault();
