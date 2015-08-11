@@ -33,7 +33,11 @@
 
 		<!--- Bootstrap --->
 		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/bootstrap.min.css?v=1" />
+		<!--- Main --->
 		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/main.css?v=1" />
+
+		<!--- Prism --->
+		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/prism.css?v=1" />
 
 		<!--- Font Awesome --->
 		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/font-awesome.min.css" />
@@ -58,11 +62,11 @@
 		<div id="wrapper">
 			#cb.quickView(view='_header')#
 			<div class="infoHeader">
-				<h1 class="mobile-title">Nathanial Welsh</h1>
+				<h1 class="mobile-title"></h1>
 				<ul>
 					<li><i class="fa fa-search fa-2x"></i></li>
 					<li class="search-list">#cb.quickView("_search")#
-					<li class="site-banner">Nathanial Welsh</li>
+					<li class="site-banner"><a href="index.cfm">Nathanial Welsh</a></li>
 				</ul>
 			</div>
 			<!-- Full Page Image Background Carousel Header -->
@@ -140,6 +144,7 @@
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/d3.min.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/prism.js"></script>
 
 	<script>
 	    $("##menu-toggle").click(function(e) {

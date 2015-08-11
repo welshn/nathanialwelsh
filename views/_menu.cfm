@@ -1,9 +1,9 @@
 ﻿<cfoutput>
-<div class="hotdog-wrapper"> 
+<div class="hotdog-wrapper">
 	<a href="##menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x hotdog"></i></a>
 </div>
 <div id="sidebar-wrapper">
-	<ul class="sidebar-nav">	
+	<ul class="sidebar-nav">
 		<cfset menuData = cb.rootMenu(type="data",levels="*")>
 		<cfloop array="#menuData#" index="menuItem">
 <!--- 			<cfif structKeyExists(menuItem, "subPageMenu")>
@@ -23,7 +23,7 @@
 				<a href="#event.buildLink('blog')#">Blog</a>
 			</li>
 		</cfif>
-		
+
 		<div class="motto">
 			<h2>Observe<br>
 			Adapt<br>

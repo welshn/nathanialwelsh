@@ -159,7 +159,7 @@ body{
 	height: 100%;
 	margin-left: -250px;
 	overflow-y: auto;
-	background: #1f2223;
+	background: #141414;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -190,7 +190,7 @@ body{
 	z-index: 9999;
 	width: 250px;
 	border-bottom: 1px solid rgb(39, 39, 39);
-	background: #1f2223;
+	background: #141414;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -242,7 +242,7 @@ body{
     font-size: 14px;
     text-align: left;
     list-style: none;
-    background-color: #1f2223;
+    background-color: #141414;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid rgb(204, 204, 204);
@@ -293,13 +293,12 @@ body{
 
 	#page-content-wrapper {
 		position: relative;
-		height:700px;
 	}
 
 	#wrapper.toggled #page-content-wrapper {
 		position: relative;
 		margin-right: 0;
-		margin-left: 80px;
+		padding-left: 80px;
 		-webkit-transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease;
 		-o-transition: all 0.5s ease;
@@ -421,7 +420,7 @@ header h1{
 }
 
 .site-banner {
-	background-color: #1f2223;
+	background-color: #141414;
     color: rgb(255, 255, 255);
     font-size: 28px;
     padding: 25px 25px 18px 25px;
@@ -472,6 +471,8 @@ header h1{
 	background-color: white;
 	float: left;
 	position: relative;
+	margin-top: 50px;
+	padding-bottom: 25px;
 }
 
 .footer-icons {
@@ -490,7 +491,7 @@ header h1{
 
 .infoHeader {
 	background-color: white;
-	border-bottom: 1px solid #1f2223;
+	border-bottom: 1px solid rgb(232, 232, 232);
 	height: 75px;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
@@ -581,13 +582,13 @@ header h1{
 	padding-left: 10px;
 }
 
-.fa-phone, .fa-search, .fa-user {
+.fa-phone:hover, .fa-search:hover, .fa-user:hover {
 	padding: 25px;
 	color: gray;
 	text-decoration: none;
 }
 
-.fa-phone:hover, .fa-search:hover, .fa-user:hover {
+.fa-search {
 	padding: 25px;
 	color: gray;
 	text-decoration: none;
@@ -643,7 +644,6 @@ header h1{
 	}
 	.content-midRight{
 		width:100%;
-		height: 100%;
 	}
 	.content-left, .content-midLeft {
 		border-bottom: 1px solid rgb(232, 232, 232);
@@ -682,7 +682,7 @@ header h1{
 	}
 
 	.infoHeader {
-		background-color: #1f2223;
+		background-color: #141414;
 	}
 }
 
@@ -701,4 +701,79 @@ header h1{
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.effect2 {
+  position: relative;
+}
+
+.effect2:before, .effect2:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.effect2:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.shortcodes {
+	background-color: white;
+	padding: 5px 0 5px 10px;
+	margin: 25px 7.5px 25px 7.5px;
+	border-radius: 5px;
+	border:1px solid rgb(232, 232, 232);
+}
+
+#menu-toggle span, #menu-toggle span:before, #menu-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#menu-toggle span:before {
+  top: -10px;
+}
+#menu-toggle span:after {
+  bottom: -10px;
+}
+
+.site-banner a{
+	text-decoration: none;
+    color: white;
+}
+
+.content-header {
+	background-color: #141414;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.content-header a {
+	color: white;
 }
