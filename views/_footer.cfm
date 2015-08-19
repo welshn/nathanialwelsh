@@ -12,13 +12,9 @@
 		</div>
 		<div class="footer-inner">
 			<div class="content-left">
-				<h2>Quick Links</h2>
-				<ul>
-					<li><a href="">Resume</a></li>
-					<li><a href="">How I Made this Site?</a></li>
-					<li><a href="">Going to Space!</a></li>
-					<li><a href="">GitHub Team Project</a></li>
-				</ul>
+				<h2>About</h2>
+				<p>I am a Computer Science major at the University of Wisconsin Platteville, with a minor in Mathematics. I am also a firefighter for the City of Platteville. I love learning and always strive to become a more rounded and educated person. To read more, click <a href="about-me.cfm">here...</a>
+				</p>
 			</div>
 			<div class="content-midLeft">
 				<a class="twitter-timeline" href="https://twitter.com/NathanialWelsh" data-widget-id="624755494679281665" height="250" width="100%">Tweets by @NathanialWelsh</a>

@@ -1,6 +1,5 @@
 ﻿<cfoutput>
-<div class="row-fluid">
-	<div class="span9">
+	<div class="col-md-9 content-blog">
 		<!--- ContentBoxEvent --->
 		#cb.event("cbui_preEntryDisplay")#
 
@@ -71,24 +70,23 @@
 
 	</div>
 
-	<div class="span3">
+	<div class="col-md-3">
 		<div class="well">
 			#cb.quickView(view='_blogsidebar')#
 		</div>
 	</div>
-</div>
 
-<!--- Custom JS --->
-<script type="text/javascript">
-	$(document).ready(function() {
-	 	// form validator
-		$("##commentForm").validator({position:'top left'});
-		<cfif cb.isCommentFormError()>
-		toggleCommentForm();
-		</cfif>
-	});
-	function toggleCommentForm(){
-		$("##commentForm").slideToggle();
-	}
-</script>
+	<!--- Custom JS --->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		 	// form validator
+			$("##commentForm").validator({position:'top left'});
+			<cfif cb.isCommentFormError()>
+			toggleCommentForm();
+			</cfif>
+		});
+		function toggleCommentForm(){
+			$("##commentForm").slideToggle();
+		}
+	</script>
 </cfoutput>

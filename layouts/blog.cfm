@@ -32,14 +32,19 @@
 		<base href="#getSetting('htmlBaseURL')#" />
 
 		<!--- Bootstrap --->
-		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/bootstrap/swatches/#lcase(cb.layoutsetting('bootswatchTheme','default'))#/bootstrap.min.css?v=1" />
+		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/bootstrap.min.css?v=1" />
+
+		<!--- Main --->
+		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/main.css?v=1" />
+
+		<!--- Prism --->
+		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/prism.css?v=1" />
 
 		<!--- Font Awesome --->
-		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/font-awesome/font-awesome.min.css?v=1" />
-		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/font-awesome/font-awesome-ie7.min.css?v=1" />
+		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/font-awesome.min.css" />
 
 		<!--- Minify & Cache Our Assets --->
-		<cfif cb.layoutsetting('minifyCacheAssets',true)>
+		<!--- <cfif cb.layoutsetting('minifyCacheAssets',true)>
 			<!--- Use LESS --->
 			<cfif cb.layoutsetting('useLESS',true)>
 				#cb.minify(assets="#cb.layoutRoot()#/includes/css/less/blog.less,#cb.layoutRoot()#/includes/css/less/messagebox.less,#cb.layoutRoot()#/includes/css/less/paging.less,#cb.layoutRoot()#/includes/css/less/breadcrumbs.less", location="#cb.layoutRoot()#/includes/css")#
@@ -49,7 +54,7 @@
 		<cfelse>
 			<!--- Include our unminified, unLESSified, non cached version of the stylesheet --->
 			<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/main.css?v=1" />
-		</cfif>
+		</cfif> --->
 
 		<!--- RSS Stuff --->
 		<link rel="alternate" type="application/rss+xml" title="Recent Updates" href="#cb.linkRSS()#" />
@@ -61,44 +66,57 @@
 		#cb.event("cbui_beforeHeadEnd")#
 	</head>
 	<body>
-		<!--- ContentBoxEvent --->
-		#cb.event("cbui_afterBodyStart")#
+		<div id="wrapper">
+			<!--- ContentBoxEvent --->
+			#cb.event("cbui_afterBodyStart")#
 
-		<div class="container">
+				#cb.quickView(view='_header')#
+				<div class="infoHeader">
+					<h1 class="mobile-title">Nathanial Welsh</h1>
+					<ul>
+						<li><i class="fa fa-search fa-2x"></i></li>
+						<li class="search-list">#cb.quickView("_search")#
+						<li class="site-banner"><a href="index.cfm">Nathanial Welsh</a></li>
+					</ul>
+				</div>
 
-			#cb.quickView(view='_header')#
+				<!--- <cfif not getPlugin("messagebox").isEmpty()>
+					<div class="row-fluid">
+						<div class="span12">
+							#cb.getPlugin("messagebox").renderit()#
+						</div>
+					</div>
+				</cfif> --->
+				<div id="page-content-wrapper">
+					<div class="row-fluid">
+						<!--- ContentBoxEvent --->
+						#cb.event("cbui_beforeContent")#
 
-			<!--- <cfif not getPlugin("messagebox").isEmpty()>
-				<div class="row-fluid">
-					<div class="span12">
-						#cb.getPlugin("messagebox").renderit()#
+						<!--- Content --->
+						#renderView()#
+
+						<!--- ContentBoxEvent --->
+						#cb.event("cbui_afterContent")#
 					</div>
 				</div>
-			</cfif> --->
+				<hr>
 
-			<div class="row-fluid">
-				<div class="span12">
-					<!--- ContentBoxEvent --->
-					#cb.event("cbui_beforeContent")#
-
-					<!--- Content --->
-					#renderView()#
-
-					<!--- ContentBoxEvent --->
-					#cb.event("cbui_afterContent")#
-				</div>
-			</div>
-
-			<hr>
-
-			#cb.quickView(view='_footer')#
-
+				#cb.quickView(view='_footer')#
 		</div>
-
 	</body>
 
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/jquery.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/d3.min.js"></script>
+	<script type="text/javascript" src="#cb.layoutRoot()#/includes/js/prism.js"></script>
+	
+	<script>
+	    $("##menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("##wrapper").toggleClass("toggled");
+	    });
+    </script>
 </html>
 </cfoutput>

@@ -1,6 +1,5 @@
 ﻿<cfoutput>
-<div class="row-fluid">
-	<div class="span9">
+	<div class="col-md-9 content-blog">
 		<!--- top gap --->
 		<div class="post-top-gap"></div>
 
@@ -40,10 +39,10 @@
 
 	</div>
 
-	<div class="span3">
+	<div class="col-md-3">
 		<div class="well">
 			#cb.quickView(view='_blogsidebar')#
 		</div>
 	</div>
-</div>
+
 </cfoutput>

@@ -30,6 +30,7 @@ html, body {
 body{
 	font-family: 'Raleway', sans-serif;
 	background-color: #f2f2f2;
+	font-size: 15px;
 }
 
 /* Blog */
@@ -172,7 +173,7 @@ body{
 
 .hotdog{
 	color:white;
-	padding: 25px;
+	padding: 22px;
 }
 .toggled .hotdog-wrapper{
 	margin-left: 0px;
@@ -413,7 +414,7 @@ header h1{
 
 .content-left, .content-midLeft, .content-midRight, .content-right {
 	width:33.3333%;
-	height:275px;
+	min-height:275px;
 	padding: 15px;
 	font-size: 18px;
 	border-right: 1px solid rgb(232, 232, 232);
@@ -446,6 +447,7 @@ header h1{
 
 .content-midLeft {
 	float:right;
+	margin-top: 10px;
 }
 
 .content-midRight {
@@ -472,11 +474,12 @@ header h1{
 	float: left;
 	position: relative;
 	margin-top: 50px;
-	padding-bottom: 25px;
 }
 
 .footer-icons {
 	width: 100%;
+	webkit-box-shadow: -5px -5px 5px 5px#777;
+	box-shadow: 1px -2px 5px #777;
 }
 
 .footer ul{
@@ -582,7 +585,7 @@ header h1{
 	padding-left: 10px;
 }
 
-.fa-phone:hover, .fa-search:hover, .fa-user:hover {
+.fa-phone:hover, .fa-search:hover {
 	padding: 25px;
 	color: gray;
 	text-decoration: none;
@@ -599,7 +602,7 @@ header h1{
 	padding: 25px 0px 25px 25px;
 }
 
-.content-midRight p, .content-left ul {
+.content-midRight p, .content-left p {
 	padding: 12px;
     border-width: 0 0 1px;
     border-bottom: 1px solid rgb(232, 232, 232);
@@ -611,7 +614,6 @@ header h1{
     transition: box-shadow .3s ease-out;
     position: relative;
     top: -10px;
-    height: 206px;
 }
 
 .content-left li {
@@ -697,6 +699,26 @@ header h1{
 	transition: box-shadow .3s ease-out;
 }
 
+.content-blog {
+	background-color: white;
+	padding: 0 12px 12px 12px;
+	border-width: 0 0 1px;
+	margin-top: 50px;
+	border: 1px solid rgb(232, 232, 232);
+	border-radius: 5px;
+	box-shadow: 0 0 0 -3px rgba(0, 0, 0, 0);
+	transition: box-shadow .3s ease-out;
+}
+
+.contentBar {
+	padding: 25px;
+}
+
+.post {
+	padding: 25px;
+}
+
+
 
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
     padding-right: 0px;
@@ -776,4 +798,11 @@ header h1{
 
 .content-header a {
 	color: white;
+}
+
+.well {
+    margin-top: 44px;
+    background-color: white;
+    float: right;
+	padding: 25px;
 }

@@ -3,9 +3,6 @@
 #cb.event("cbui_BeforeSideBar")#
 
 <ul class="nav nav-list">
-	<li class="nav-header">Description</li>
-	<li>#cb.siteDescription()#</li>
-
 	<li class="nav-header">Categories</li>
 	<!---
 	Display Categories using ContentBox collection template rendering

@@ -33,6 +33,7 @@
 
 		<!--- Bootstrap --->
 		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/bootstrap.min.css?v=1" />
+
 		<!--- Main --->
 		<link rel="stylesheet" href="#cb.layoutRoot()#/includes/css/main.css?v=1" />
 
@@ -62,7 +63,7 @@
 		<div id="wrapper">
 			#cb.quickView(view='_header')#
 			<div class="infoHeader">
-				<h1 class="mobile-title"></h1>
+				<h1 class="mobile-title">Nathanial Welsh</h1>
 				<ul>
 					<li><i class="fa fa-search fa-2x"></i></li>
 					<li class="search-list">#cb.quickView("_search")#
@@ -135,8 +136,6 @@
 			</div>
 			#cb.quickView(view='_footer')#
 		</div>
-
-
 	</body>
 
 	<!-- Placed at the end of the document so the pages load faster -->
