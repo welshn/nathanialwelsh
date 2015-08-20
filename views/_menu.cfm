@@ -12,7 +12,7 @@
 					#buildSubMenu(menuItem.subPageMenu)#
 				</li>
 			<cfelse> --->
-				<cfif !cb.isBlogView() and event.buildLink(cb.getCurrentPage().getSlug()) eq menuItem.link><li class="active"><cfelse><li></cfif>
+				<cfif !cb.isBlogView() and !cb.isSearchView() and event.buildLink(cb.getCurrentPage().getSlug()) eq menuItem.link><li class="active"><cfelse><li></cfif>
 					<a href="#menuItem.link#">#menuItem.title#</a>
 				</li>
 			<!--- </cfif> --->
