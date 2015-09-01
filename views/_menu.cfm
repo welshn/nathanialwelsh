@@ -6,16 +6,13 @@
 	<ul class="sidebar-nav">
 		<cfset menuData = cb.rootMenu(type="data",levels="*")>
 		<cfloop array="#menuData#" index="menuItem">
-<!--- 			<cfif structKeyExists(menuItem, "subPageMenu")>
-				<li class="">
-					<a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title#</b></a>
-					#buildSubMenu(menuItem.subPageMenu)#
-				</li>
-			<cfelse> --->
-				<cfif !cb.isBlogView() and !cb.isSearchView() and event.buildLink(cb.getCurrentPage().getSlug()) eq menuItem.link><li class="active"><cfelse><li></cfif>
-					<a href="#menuItem.link#">#menuItem.title#</a>
-				</li>
-			<!--- </cfif> --->
+			<cfif !cb.isBlogView() and !cb.isSearchView() and event.buildLink(cb.getCurrentPage().getSlug()) eq menuItem.link>
+				<li class="active">
+			<cfelse>
+				<li>
+			</cfif>
+				<a href="#menuItem.link#">#menuItem.title#</a>
+			</li>
 		</cfloop>
 
 		<cfif ( !prc.cbSettings.cb_site_disable_blog )>
@@ -30,6 +27,12 @@
 			Overcome</h2>
 		</div>
 	</ul>
+	<!--- 			<cfif structKeyExists(menuItem, "subPageMenu")>
+					<li class="">
+						<a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title#</b></a>
+						#buildSubMenu(menuItem.subPageMenu)#
+					</li>
+				<cfelse> --->
 	<!--- Blog Search Form --->
 	<!--- <cfif ( !prc.cbSettings.cb_site_disable_blog )>
 		<form id="searchForm" class="navbar-search pull-right" name="searchForm" method="post" action="#cb.linkSearch()#">
